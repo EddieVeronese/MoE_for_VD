@@ -1,0 +1,38 @@
+# exclude python env
+cluster/myvenv/
+router/.venv/
+router/.mixed/
+JGNNdet/.venv/
+LineVul/.myvenv
+
+
+# router
+/router/models/*
+!/router/datasets/.gitkeep
+!/router/ifa_records/.gitkeep
+!/router/logs/.gitkeep
+!/router/models/.gitkeep
+!/router/results/.gitkeep
+/router/moe_func.py
+/router/moe_state.py
+/router/tes_github_state.py
+/router/tes_github_func.py
+
+# cluster
+!/cluster/datasets/.gitkeep
+!/cluster/logs/.gitkeep
+
+#JGNNdet
+/JGNNdet/sourcescripts/storage/cache/
+/JGNNdet/sourcescripts/storage/outputs/
+/JGNNdet/sourcescripts/storage/processed/
+/JGNNdet/sourcescripts/storage/archive/*
+!/JGNNdet/sourcescripts/storage/archive/.gitkeep
+/JGNNdet/sourcescripts/storage/external/*
+!/JGNNdet/sourcescripts/storage/external/get_func_graph.scala
+
+#LineVul
+/LineVul/linevul/saved_models/checkpoint-best-f1/*
+!/LineVul/linevul/saved_models/checkpoint-best-f1/.gitkeep
+
+
