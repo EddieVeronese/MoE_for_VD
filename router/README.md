@@ -18,7 +18,9 @@ To train a router model based on CWE, you need to download the appropriate datas
 
 ```
 cd datasets
-gdown metti link
+gdown https://drive.google.com/uc?id=1QpsbDZwhrV2HhpddOLOUDQu1MDCRGLuc
+gdown https://drive.google.com/uc?id=1GTAT2AepayFAZJXcwsasao-aXA-148hh
+gdown https://drive.google.com/uc?id=1koqk0H2vmXwSaErq921R6SMT5uGHj4-z
 cd ../
 ```
 And then you need to change the dataset used in the script by going to the file ```train_router_CWE.py``` at line 179, 185 and 191.
@@ -42,6 +44,11 @@ test_pd = test_pd[test_pd['target'] == 1]
 If, however, the model you want to train is based on a dataset created through clustering, you need to repeat all the previous steps, but with the script ```train_router_cluster.py``` and finally run:
 
 ```
+cd datasets
+gdown https://drive.google.com/uc?id=1rHIQxs-_sY9nv8SkVn952ixViiMTuzxY
+gdown https://drive.google.com/uc?id=1VxbkI4wPYhdTnmsNWADPds49WfOQY5-7
+gdown https://drive.google.com/uc?id=1iuuFjc2-kd30NU4r9yKTs4CdzuQx1zp0
+cd ../
 python train_router_cluster.py
 ```
 
@@ -53,7 +60,10 @@ To test CWE based router you must first have a model in the folder ```models``` 
 
 ```
 cd datasets
-gdown metti link
+gdown https://drive.google.com/uc?id=1koqk0H2vmXwSaErq921R6SMT5uGHj4-z
+cd ../
+cd models
+gdown --folder https://drive.google.com/drive/folders/113bFITEqbz9NVR9s9isyAy8El_HdA8oc
 cd ../
 ```
 
@@ -68,6 +78,12 @@ python test_router_CWE.py
 If, however, the model you want to test is based on a dataset created through clustering, you need to repeat all the previous steps, but with the script ```test_router_cluster.py``` and finally run:
 
 ```
+cd datasets
+gdown https://drive.google.com/uc?id=1iuuFjc2-kd30NU4r9yKTs4CdzuQx1zp0
+cd ../
+cd models
+gdown --folder https://drive.google.com/drive/folders/1AkFpXztA5XE7fLoE_7EMtnjzyhTNsuDE
+cd ../
 python test_router_cluster.py
 ```
 
@@ -83,11 +99,21 @@ cd LineVul
 cd linevul
 cd saved_models
 cd checkpoint-best-f1
-gdown metti link
+gdown https://drive.google.com/uc?id=1cOwkzjsNYelSstx3CcMxVIuuHCislkEC
+gdown https://drive.google.com/uc?id=1_9E5nmLv1ZUjxOM81c-4gKFIcWJihglf
+gdown https://drive.google.com/uc?id=1IC0R_k_czExOZtyqXhRPpGjKKdR_uFu2
+gdown https://drive.google.com/uc?id=1ELY3psqKwZKcafYI2W68VSll3rV1IfSn
+gdown https://drive.google.com/uc?id=1f57S9iQsooZgujS1Ry3Xysb7OxMpfeU2
+gdown https://drive.google.com/uc?id=1fIty7YypU8X1DZtPt5FjH4sJ1LpgNKBL
 cd ../../../../
 cd router
 cd dataset
-gdown metti link
+gdown https://drive.google.com/uc?id=1J-XS_ftJKtu3qLYwSGm5TtQVy2d74bKW
+gdown https://drive.google.com/uc?id=1OJaCi9EdHcG2qOaktxpqEwhePiBJgpBS
+gdown https://drive.google.com/uc?id=11lP6mF2oBixWson4sUnZCbVYjfqhOwE5
+gdown https://drive.google.com/uc?id=150NGePVyR5mcT4vlflCTHkzKUJxyAsZv
+gdown https://drive.google.com/uc?id=1pNzwRnYaQUs1BrZ2cKBPygUPAV1jbuHT
+gdown https://drive.google.com/uc?id=1FbdRwp-WIMwxXo4dg6t3NF25eJeYLmT8
 cd ..
 ```
 
@@ -113,11 +139,19 @@ cd LineVul
 cd linevul
 cd saved_models
 cd checkpoint-best-f1
-gdown metti link
+gdown https://drive.google.com/uc?id=1cOwkzjsNYelSstx3CcMxVIuuHCislkEC
+gdown https://drive.google.com/uc?id=1_9E5nmLv1ZUjxOM81c-4gKFIcWJihglf
+gdown https://drive.google.com/uc?id=1IC0R_k_czExOZtyqXhRPpGjKKdR_uFu2
+gdown https://drive.google.com/uc?id=1ELY3psqKwZKcafYI2W68VSll3rV1IfSn
+gdown https://drive.google.com/uc?id=1f57S9iQsooZgujS1Ry3Xysb7OxMpfeU2
+gdown https://drive.google.com/uc?id=1fIty7YypU8X1DZtPt5FjH4sJ1LpgNKBL
 cd ../../../../
 cd router
 cd dataset
-gdown metti link
+gdown https://drive.google.com/uc?id=1koqk0H2vmXwSaErq921R6SMT5uGHj4-z
+cd ..
+cd models 
+gdown --folder https://drive.google.com/drive/folders/113bFITEqbz9NVR9s9isyAy8El_HdA8oc
 cd ..
 ```
 

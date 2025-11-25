@@ -64,11 +64,11 @@ p_model_classic.bin  | model obtain from train of the entire Python dataset
   cd linevul
   cd saved_models
   cd checkpoint-best-f1
-  gdown metti link modello
+  gdown https://drive.google.com/uc?id=1cOwkzjsNYelSstx3CcMxVIuuHCislkEC
   cd ../../..
   cd data
   cd datasets
-  gdown metti link dataset
+  gdown https://drive.google.com/uc?id=1J-XS_ftJKtu3qLYwSGm5TtQVy2d74bKW
   cd ../../..
   ```
   
@@ -107,7 +107,8 @@ p_model_classic.bin  | model obtain from train of the entire Python dataset
   ```
   cd data
   cd datasets
-  gdown metti link dataset
+  gdown https://drive.google.com/uc?id=1QpsbDZwhrV2HhpddOLOUDQu1MDCRGLuc
+  gdown https://drive.google.com/uc?id=1GTAT2AepayFAZJXcwsasao-aXA-148hh
   cd ../../..
   ```
   

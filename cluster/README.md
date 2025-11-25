@@ -39,7 +39,7 @@ create_new_cluster.py: This script maps each CWE ID to its dominant cluster, upd
 To create clusters download the desired dataset, set his name at line 8 of the script ```cluster.py``` and then run the following commands, for example:
   ```
   cd datasets
-  gdown metti link
+ gdown https://drive.google.com/uc?id=1W66CvbtEbcDxJkffZN-Bt9Mh3n7TyQN-
   cd ..
   python cluster.py
   ```
@@ -49,7 +49,8 @@ This will create a csv named "clustered" inside the main project folder.
 To create the datasets for clustered now you need to load into dataset your datasets already divided into train, test and val set their names inside the ```create_new_cluster.py``` at line 18 file as shown in the following commands:
 ```
 cd datasets
-gdown metti link
+gdown https://drive.google.com/uc?id=1BVkWfc-AJk5kT5T-R3nCLfhcCoc77e9X
+gdown https://drive.google.com/uc?id=1koqk0H2vmXwSaErq921R6SMT5uGHj4-z
 cd ..
 python create_new_cluster.py
 ```

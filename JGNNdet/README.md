@@ -30,7 +30,7 @@ To train a model, you need to download the appropriate dataset into the ```\sour
 cd sourcescripts
 cd storage
 cd external
-gdown metti link
+gdown https://drive.google.com/uc?id=1ld9rOOvArisajTrC6UARD0mRnyPVfkqZ
 cd ../../..
 ```
 And then you need to change the dataset in the script by going to the file ```sourcescripts/utils/preprocessdata.py``` at line 140.
@@ -46,9 +46,14 @@ The results will be stored in ```storage/outputs/```
 ### Test 
 To replicate the test of the trained model you simply have to create a folder inside ```storage/archive```, for example ```model_1``` and put inside it the folders resulting from the train, that are ```checkpoints, codebert_method_level, Dataset, Dataset_Vvuldet_codebert_pdg+raw, minimal_datasets and processed```
 
-Then you can then start the test with the command and the results will appear inside an ```output``` folder:
+Then you can then start the test with the command and the results will appear inside an ```output``` folder, for example:
 
 ```
+cd sourcescripts
+cd storage
+cd archive
+gdown --folder https://drive.google.com/drive/folders/1Z3s-hk8r7GFFqsMCfHRotI7GVnqgYIl6
+cd ../../..
 bash zrun/process_test.sh
 ```
 
