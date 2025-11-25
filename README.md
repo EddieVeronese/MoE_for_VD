@@ -26,7 +26,7 @@ This brief description shows how the datasets within the project are divided int
 To download and view the complete datasets:
 
 ```
-gdown metti link 
+gdown https://drive.google.com/uc?id=154ZaiotSgg7FHqHauywCn_sSa8Iy3pY8
 unzip datasets.zip
 cd datasets
 ```
