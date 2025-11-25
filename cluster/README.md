@@ -26,14 +26,6 @@ cluster.py: This script generates CodeBERT embeddings for each function in a dat
 create_new_cluster.py: This script maps each CWE ID to its dominant cluster, updates all dataset splits with this new cluster label, and then saves both the full updated datasets and separate subset files for each cluster.
 
 ### About the Experiment Replication  
-  
-  
-  To download all the datasets used in the experiments, follow the commands below
-  ```
-  cd datasets
-  gdown metti link
-  cd ..
-  ```
 
 #### How to create clusters
 To create clusters download the desired dataset, set his name at line 8 of the script ```cluster.py``` and then run the following commands, for example:

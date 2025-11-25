@@ -18,48 +18,10 @@ The datasets have a variable number of columns based on the language, but the th
 2. target (int): The function-level label that determines whether a function is vulnerable or not
 3. vul_func_with_fix (str): The fixed function with added in deleted lines labeled.
 The three datasets used for the experiments are: BigVul (C/C++), ProjectKB (Java) and CVEFixes (Python).
-
-### About the Models
-
-All of the models can be downloaded from public Google Drive and are named based on the convention described in the following table:
-
-Model Name | Model Specification 
-| :---: | :---: 
-j_model_rand_x.bin  | model obtain from random train of spli "x" from the Java dataset 
-j_model_x.bin  | model obtain from train of CWE_class "x" from the Java dataset 
-j_model_clu_x.bin  | model obtain from train of cluster "x" from the Java dataset 
-j_model_classic.bin  | model obtain from train of the entire Java dataset 
-p_model_x.bin  | model obtain from train of CWE_class "x" from the Python dataset 
-p_model_clu_x.bin  | model obtain from train of cluster "x" from the Python dataset 
-p_model_classic.bin  | model obtain from train of the entire Python dataset 
-
-### About the Experiment Replication  
-  
-  
-  To download all the datasets used in the experiments, follow the commands below
-  ```
-  cd data
-  cd datasets
-  gdown metti link
-  cd ../..
-  ```
-  
-  If you want to download only a part of the datasets used, you must download them individually from the same gdrive and insert them into the folder indicated above.
-
-  To download all the models used in the experiments to test, follow the commands below
-  ```
-  cd data
-  cd saved_models
-  cd checkpoint-best-f1
-  gdown metti link
-  cd ../..
-  ```
-
-  If you want to download only a part of the datasets used, you must download them individually from the same gdrive and insert them into the folder indicated above.
-
+ 
     
 #### How to test a model
-  To test a model, download the model and corresponding datasets, for example
+  To test a model, download the model and corresponding datasets in the right folder, for example
   ```
   cd linevul
   cd saved_models
