@@ -84,7 +84,8 @@ gdown https://drive.google.com/uc?id=1iuuFjc2-kd30NU4r9yKTs4CdzuQx1zp0
 cd ../
 cd models
 gdown https://drive.google.com/uc?id=1ChOMciOKR2moJRsK6zUBebCUlodKTjHs
-unzip output_codebert-base_seed54.zip  
+unzip output_codebert-base_seed54.zip
+cd ../
 python test_router_cluster.py
 ```
 
