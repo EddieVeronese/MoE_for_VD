@@ -8,7 +8,7 @@ from autogluon.multimodal import MultiModalPredictor
 def load_router_model():
     print(f"CUDA available: {torch.cuda.is_available()}")
     print(f"Device: {torch.cuda.current_device()}")
-    router_model_path = "models/output_codebert-base_seed45/focal_ep40_bs512_eval_f1_macro_gamma1"
+    router_model_path = "models/output_codebert-base_seed49/focal_ep40_bs512_eval_f1_macro_gamma1"
     predictor = MultiModalPredictor.load(router_model_path)
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     print(f"Model will be loaded on: {device}")
@@ -68,14 +68,12 @@ def load_dataset(test_data_path):
 
 
 expert_models = {
-    'CWE-284': 'model_bert_284.bin',
-    'CWE-664': 'model_bert_664.bin',
-    'CWE-682': 'model_bert_682.bin',
-    'CWE-691': 'model_bert_691.bin',
-    'CWE-693': 'model_bert_693.bin',
-    'CWE-703': 'model_bert_703.bin',
-    'CWE-707': 'model_bert_707.bin',
-    'CWE-710': 'model_bert_710.bin',
+    'CWE-284': 'j_model_284.bin',
+    'CWE-435': 'j_model_435.bin',
+    'CWE-664': 'j_model_664.bin',
+    'CWE-693': 'j_model_693.bin',
+    'CWE-703': 'j_model_703.bin',
+    'CWE-707': 'j_model_707.bin',
 }
 
 
@@ -84,7 +82,7 @@ def main():
     predictor = load_router_model()
 
     
-    test_data_path = "datasets/processed_test.csv"
+    test_data_path = "datasets/j_processed_test.csv"
     test_df = load_dataset(test_data_path)
 
     

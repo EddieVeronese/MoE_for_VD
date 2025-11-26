@@ -2,7 +2,7 @@ import pandas as pd
 from scipy.stats import chi2_contingency
 
 # Load dataset
-df = pd.read_csv("bigvul_clustered.csv")
+df = pd.read_csv("clustered.csv")
 
 # Columns to ignore
 excluded = ["processed_func", "cluster", "func_after", "func_before", "Summary", "Known Exploits", "commit_message", "files_changed"]

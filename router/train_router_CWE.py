@@ -176,19 +176,19 @@ def parse_args():
     parser.add_argument(
         "--train_file",
         type=str,
-        default="datasets/p_processed_train_only_vuln.csv",
+        default="datasets/j_processed_train.csv",
         help="train file",
     )
     parser.add_argument(
         "--test_file",
         type=str,
-        default="datasets/p_processed_test_only_vuln.csv",
+        default="datasets/j_processed_test.csv",
         help="test file",
     )
     parser.add_argument(
         "--val_file",
         type=str,
-        default="datasets/p_processed_val_only_vuln.csv",
+        default="datasets/j_processed_val.csv",
         help="val file",
     )
     args = parser.parse_args()

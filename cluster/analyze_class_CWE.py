@@ -1,7 +1,7 @@
 import pandas as pd
 
 # Load dataset
-df = pd.read_csv("bigvul_clustered.csv")
+df = pd.read_csv("clustered.csv")
 
 # Build contingency table
 obs = pd.crosstab(df["class_CWE"], df["cluster"])

@@ -3,15 +3,15 @@
 echo "Start training..."
 
 python linevul_main.py \
-  --output_dir=./linevul/saved_models \
+  --output_dir=./saved_models \
   --model_type=roberta \
   --tokenizer_name=microsoft/codebert-base \
   --model_name_or_path=microsoft/codebert-base \
   --do_train \
   --do_test \
-  --train_data_file=../data/datasets/j_processed_train.csv \
-  --eval_data_file=../data/datasets/j_processed_vel.csv \
-  --test_data_file=../data/datasets/j_processed_test.csv \
+  --train_data_file=../data/datasets/j_processed_train_CWE-284.csv \
+  --eval_data_file=../data/datasets/j_processed_val_CWE-284.csv \
+  --test_data_file=../data/datasets/j_processed_test_CWE-284.csv \
   --epochs 10 \
   --block_size 512 \
   --train_batch_size 16 \

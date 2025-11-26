@@ -3,12 +3,12 @@ from sklearn.cluster import KMeans
 import numpy as np
 
 # Load dataset
-df = pd.read_csv("bigvul_clustered.csv")
-df["CWE ID"] = df["CWE ID"].astype(str)
+df = pd.read_csv("clustered.csv")
+df["CWE-ID"] = df["CWE-ID"].astype(str)
 df["cluster"] = df["cluster"].astype(str)
 
 # Build CWE ID vs cluster table
-obs = pd.crosstab(df["CWE ID"], df["cluster"])
+obs = pd.crosstab(df["CWE-ID"], df["cluster"])
 
 # Normalize rows (relative frequency of CWEs in clusters)
 obs_norm = obs.div(obs.sum(axis=1), axis=0)
@@ -20,7 +20,7 @@ cwe_groups = kmeans.fit_predict(obs_norm)
 # Map CWE ID → group
 group_labels = [f"group_{i}" for i in cwe_groups]
 cwe_to_group = dict(zip(obs.index, group_labels))
-df["CWE_group"] = df["CWE ID"].map(cwe_to_group)
+df["CWE_group"] = df["CWE-ID"].map(cwe_to_group)
 
 # Build new contingency table group vs cluster
 group_obs = pd.crosstab(df["CWE_group"], df["cluster"])

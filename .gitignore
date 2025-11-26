@@ -30,9 +30,13 @@ LineVul/.myvenv
 !/JGNNdet/sourcescripts/storage/archive/.gitkeep
 /JGNNdet/sourcescripts/storage/external/*
 !/JGNNdet/sourcescripts/storage/external/get_func_graph.scala
+!/JGNNdet/sourcescripts/storage/external/change_name.py
 
 #LineVul
 /LineVul/linevul/saved_models/checkpoint-best-f1/*
 !/LineVul/linevul/saved_models/checkpoint-best-f1/.gitkeep
 
-
+!/LineVul/data/
+!/LineVul/data/.gitkeep
+!/LineVul/data/datasets/
+!/LineVul/data/datasets/.gitkeep

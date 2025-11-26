@@ -6,7 +6,7 @@ from autogluon.multimodal import MultiModalPredictor
 def load_router_model():
     print(f"CUDA available: {torch.cuda.is_available()}")
     print(f"Device: {torch.cuda.current_device()}")
-    router_model_path = "models/output_codebert-base_seed55/focal_ep40_bs512_eval_f1_macro_gamma1"
+    router_model_path = "models/output_codebert-base_seed54/focal_ep40_bs512_eval_f1_macro_gamma1"
     predictor = MultiModalPredictor.load(router_model_path)
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     print(f"Model will be loaded on: {device}\n")

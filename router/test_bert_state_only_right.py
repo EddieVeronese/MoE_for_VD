@@ -3,14 +3,12 @@ import subprocess
 
 # Mapping between CWE classes and expert model filenames
 expert_models = {
-    '1': 'j_model_rand_1.bin',
-    '2': 'j_model_rand_2.bin',
-    '3': 'j_model_rand_3.bin',
-    '4': 'j_model_rand_4.bin',
-    '5': 'j_model_rand_5.bin',
-    '6': 'j_model_rand_6.bin',
-    '7': 'j_model_rand_7.bin',
-    '8': 'j_model_rand_8.bin',
+    '284': 'j_model_284.bin',
+    '435': 'j_model_435.bin',
+    '664': 'j_model_664.bin',
+    '693': 'j_model_693.bin',
+    '703': 'j_model_703.bin',
+    '707': 'j_model_707.bin',
 }
 
 def run_expert_test(model_name: str, test_data_path: str) -> str:
@@ -51,7 +49,7 @@ def run_expert_test(model_name: str, test_data_path: str) -> str:
 def main():
     base_dir = "datasets"
     for suffix, model_name in expert_models.items():
-        test_csv = os.path.join(base_dir, f"j_equal_test_{suffix}.csv")
+        test_csv = os.path.join(base_dir, f"j_processed_test_CWE-{suffix}.csv")
         if not os.path.isfile(test_csv):
             print(f"[SKIP] File not found for CWE-{suffix}: {test_csv}")
             continue

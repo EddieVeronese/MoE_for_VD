@@ -31,7 +31,7 @@ The three datasets used for the experiments are: BigVul (C/C++), ProjectKB (Java
   cd data
   cd datasets
   gdown https://drive.google.com/uc?id=1J-XS_ftJKtu3qLYwSGm5TtQVy2d74bKW
-  cd ../../..
+  cd ../..
   ```
   
   To reproduce the results run the following script which will produce the results at both function and line level:
@@ -43,7 +43,7 @@ The three datasets used for the experiments are: BigVul (C/C++), ProjectKB (Java
   This command executes:
   ```
   python linevul_main.py \
-    --model_name=model_name.bin \
+    --model_name=j_model_284.bin \
     --output_dir=./saved_models \
     --model_type=roberta \
     --tokenizer_name=microsoft/codebert-base \
@@ -54,12 +54,12 @@ The three datasets used for the experiments are: BigVul (C/C++), ProjectKB (Java
     --reasoning_method=all \
     --train_data_file=../data/datasets/train.csv \
     --eval_data_file=../data/datasets/val.csv \
-    --test_data_file=../data/datasets/test.csv \
+    --test_data_file=../data/datasets/j_processed_test_CWE-284.csv \
     --block_size 512 \
     --eval_batch_size 512
   ```
 
-  You can change the model used with the --model_name flag, and the datasets used with the --train_data_file, --eval_data_file, and --test_data_file flags. You can also change the system used from codbert to uniixcoder by changing the --tokenizer_name and --model_name_or_path flags in unixcoder-base.
+  You can change the model used with the --model_name flag, and the datasets used with the --train_data_file, --eval_data_file, and --test_data_file flags. You can also change the system used from codbert to uniixcoder by changing the --tokenizer_name and --model_name_or_path flags in ```unixcoder-base```.
 
 
     
@@ -71,7 +71,7 @@ The three datasets used for the experiments are: BigVul (C/C++), ProjectKB (Java
   cd datasets
   gdown https://drive.google.com/uc?id=1QpsbDZwhrV2HhpddOLOUDQu1MDCRGLuc
   gdown https://drive.google.com/uc?id=1GTAT2AepayFAZJXcwsasao-aXA-148hh
-  cd ../../..
+  cd ../..
   ```
   
   To reproduce the results run the following script which will produce the model file inside the folder linevul/saved_models:
@@ -82,16 +82,16 @@ The three datasets used for the experiments are: BigVul (C/C++), ProjectKB (Java
     
   This command executes:
   ```
-  python linevul/linevul_main.py \
-    --output_dir=./linevul/saved_models \
+  python linevul_main.py \
+    --output_dir=./saved_models \
     --model_type=roberta \
     --tokenizer_name=microsoft/codebert-base \
     --model_name_or_path=microsoft/codebert-base \
     --do_train \
     --do_test \
-    --train_data_file=./data/datasets/j/experts_datasets/j_processed_train.csv \
-    --eval_data_file=./data/datasets/j/experts_datasets/j_processed_vel.csv \
-    --test_data_file=./data/datasets/j/experts_datasets/j_processed_test.csv \
+    --train_data_file=../data/datasets/j_processed_train_CWE-284.csv \
+    --eval_data_file=../data/datasets/j_processed_val_CWE-284.csv \
+    --test_data_file=../data/datasets/j_processed_test_CWE-284.csv \
     --epochs 10 \
     --block_size 512 \
     --train_batch_size 16 \
@@ -101,6 +101,7 @@ The three datasets used for the experiments are: BigVul (C/C++), ProjectKB (Java
     --evaluate_during_training \
     --seed 123456  2>&1 | tee train.log
   ```
+  At the end of the training the model will be saved with the name ```model.bin``` in the ```saved_models``` folder.
     
 
 ##### Acknowledgment:

@@ -26,10 +26,10 @@ def preprocess(row):
     savedir_before = imp.get_dir(imp.processed_dir() / row["dataset"] / "before")
     savedir_after = imp.get_dir(imp.processed_dir() / row["dataset"] / "after")
 
-    fpath1 = savedir_before / f"{row['id']}.py"
+    fpath1 = savedir_before / f"{row['id']}.java"
     with open(fpath1, "w") as f:
         f.write(row["before"])
-    fpath2 = savedir_after / f"{row['id']}.py"
+    fpath2 = savedir_after / f"{row['id']}.java"
     if len(row["diff"]) > 0:
         with open(fpath2, "w") as f:
             f.write(row["after"])

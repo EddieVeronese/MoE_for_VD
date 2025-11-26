@@ -33,7 +33,11 @@ cd external
 gdown https://drive.google.com/uc?id=1ld9rOOvArisajTrC6UARD0mRnyPVfkqZ
 cd ../../..
 ```
-And then you need to change the dataset in the script by going to the file ```sourcescripts/utils/preprocessdata.py``` at line 140.
+And then you need to change the dataset in the script by going to the file ```sourcescripts/utils/preprocessdata.py``` at line 140. It is also necessary to change the name of some columns of the reference dataset by running the script ```change_name.py```, with:
+
+```
+python sourcescripts/storage/external/change_name.py 
+```
 
 You can then start the train with the command:
 
@@ -41,7 +45,7 @@ You can then start the train with the command:
 bash zrun/Process_train_test.sh
 ```
 
-The results will be stored in ```storage/outputs/```
+The results will be stored in ```storage/outputs/```. Once the train is completed you need to delete the workspace folder that was created in the root directory to run further trains.
 
 ### Test 
 To replicate the test of the trained model you simply have to create a folder inside ```storage/archive```, for example ```model_1``` and put inside it the folders resulting from the train, that are ```checkpoints, codebert_method_level, Dataset, Dataset_Vvuldet_codebert_pdg+raw, minimal_datasets and processed```
@@ -52,7 +56,8 @@ Then you can then start the test with the command and the results will appear in
 cd sourcescripts
 cd storage
 cd archive
-gdown --folder https://drive.google.com/drive/folders/1Z3s-hk8r7GFFqsMCfHRotI7GVnqgYIl6
+gdown https://drive.google.com/uc?id=1OUV6ZW6Qh1gQ_UptWQtaOMD6JYI5OAfx
+unzip j_284.zip
 cd ../../..
 bash zrun/process_test.sh
 ```
@@ -66,7 +71,7 @@ By default, running the scripts will use Java code for graph construction and mo
 
 #### For C/C++ datasets
 1. Open the project in VSCode.  
-2. Search for `.java"` and replace it with `.c"`.  
+2. Search for `.java"` and replace it with `.c"`. You should get 7 occurrences to change in 5 files, that are `getgraphdata.py`, `allcwefeaturemain.py.py`, `mainfeaturemain.py`, `nodeedgesdata.py` and `preprocessdata.py`
 3. Navigate to `sourcescripts/storage/external/` and open `get_func_graph.scala`.  
 4. In line 2, change:  
    ```

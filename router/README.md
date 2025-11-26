@@ -18,8 +18,8 @@ To train a router model based on CWE, you need to download the appropriate datas
 
 ```
 cd datasets
-gdown https://drive.google.com/uc?id=1QpsbDZwhrV2HhpddOLOUDQu1MDCRGLuc
-gdown https://drive.google.com/uc?id=1GTAT2AepayFAZJXcwsasao-aXA-148hh
+gdown https://drive.google.com/uc?id=1W66CvbtEbcDxJkffZN-Bt9Mh3n7TyQN-
+gdown https://drive.google.com/uc?id=1BVkWfc-AJk5kT5T-R3nCLfhcCoc77e9X
 gdown https://drive.google.com/uc?id=1koqk0H2vmXwSaErq921R6SMT5uGHj4-z
 cd ../
 ```
@@ -31,7 +31,7 @@ You can then start the train with the command:
 python train_router_CWE.py
 ```
 
-The results will be stored in ```models/```
+The results will be stored in ```models/``` ```under the name output_codebert-base_seed42```
 
 ### Variations
 To train the model on all the vulnerabilities present in the dataset and not just on the vulnerable ones, it is necessary to comment out the lines 203, 207 and 211, that is:
@@ -41,7 +41,7 @@ val_pd = val_pd[val_pd['target'] == 1]
 test_pd = test_pd[test_pd['target'] == 1]
 ```
 
-If, however, the model you want to train is based on a dataset created through clustering, you need to repeat all the previous steps, but with the script ```train_router_cluster.py``` and finally run:
+If, however, the model you want to train is based on a dataset created through clustering, you need to repeat all the previous steps, but with the script ```train_router_cluster.py``` as shown below:
 
 ```
 cd datasets
@@ -63,7 +63,8 @@ cd datasets
 gdown https://drive.google.com/uc?id=1koqk0H2vmXwSaErq921R6SMT5uGHj4-z
 cd ../
 cd models
-gdown --folder https://drive.google.com/drive/folders/113bFITEqbz9NVR9s9isyAy8El_HdA8oc
+gdown https://drive.google.com/uc?id=1G_vZa322tei03Ii5fje6-JLVwbCTaFh3
+unzip output_codebert-base_seed49.zip  
 cd ../
 ```
 
@@ -82,8 +83,8 @@ cd datasets
 gdown https://drive.google.com/uc?id=1iuuFjc2-kd30NU4r9yKTs4CdzuQx1zp0
 cd ../
 cd models
-gdown --folder https://drive.google.com/drive/folders/1AkFpXztA5XE7fLoE_7EMtnjzyhTNsuDE
-cd ../
+gdown https://drive.google.com/uc?id=1ChOMciOKR2moJRsK6zUBebCUlodKTjHs
+unzip output_codebert-base_seed54.zip  
 python test_router_cluster.py
 ```
 
@@ -107,7 +108,7 @@ gdown https://drive.google.com/uc?id=1f57S9iQsooZgujS1Ry3Xysb7OxMpfeU2
 gdown https://drive.google.com/uc?id=1fIty7YypU8X1DZtPt5FjH4sJ1LpgNKBL
 cd ../../../../
 cd router
-cd dataset
+cd datasets
 gdown https://drive.google.com/uc?id=1J-XS_ftJKtu3qLYwSGm5TtQVy2d74bKW
 gdown https://drive.google.com/uc?id=1OJaCi9EdHcG2qOaktxpqEwhePiBJgpBS
 gdown https://drive.google.com/uc?id=11lP6mF2oBixWson4sUnZCbVYjfqhOwE5
@@ -147,11 +148,12 @@ gdown https://drive.google.com/uc?id=1f57S9iQsooZgujS1Ry3Xysb7OxMpfeU2
 gdown https://drive.google.com/uc?id=1fIty7YypU8X1DZtPt5FjH4sJ1LpgNKBL
 cd ../../../../
 cd router
-cd dataset
+cd datasets
 gdown https://drive.google.com/uc?id=1koqk0H2vmXwSaErq921R6SMT5uGHj4-z
 cd ..
 cd models 
-gdown --folder https://drive.google.com/drive/folders/113bFITEqbz9NVR9s9isyAy8El_HdA8oc
+gdown https://drive.google.com/uc?id=1G_vZa322tei03Ii5fje6-JLVwbCTaFh3
+unzip output_codebert-base_seed49.zip  
 cd ..
 ```
 
